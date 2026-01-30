@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
+    <title>Aptis reading keys</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/readingkey.css" rel="stylesheet">
+    <script src="js/reading_question/reading_question2.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- ====================================================================================
+                  HEADER SECTION
+======================================================================================== -->
+<!-- Bootstrap Icons -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-primary text-white shadow-lg">
+  <!-- Left Section -->
+  <div class="d-flex align-items-center">
+    <a href="/reading_question" class="me-3 text-decoration-none text-white fs-4 d-flex align-items-center">
+      <i class="bi bi-house-door-fill me-2 fs-5"></i> <!-- House Icon from Bootstrap Icons -->
+      <span class="fw-bold">Aptis Keys</span>
+    </a>
+  </div>
+
+  <!-- Center Section (Countdown Timer) -->
+  <div class="d-flex align-items-center">
+    
+    <span class="countdown fs-4 fw-bold" id="countdownTimer">34:00</span>
+  </div>
+
+  <!-- Right Section (Current Step) -->
+  <div id="question_step" class="fs-5 fw-bold text-light">
+    Reading Q2&3
+  </div>
+</div>
+<!-- ====================================================================================
+                  Question 2
+======================================================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<div id="question2" class="container py-5 main-content">
+    <!-- Header Section -->
+<div class="justify-content-between">
+    <h1 id="html_questheader" class="mb-2">Reading Question 2 & 3</h1>
+    <h4 id="question2_topic" class="mb-4" style="color: red;">
+        <strong>Topic: Visiting an island</strong>
+    </h4>
+</div>
+
+    <div class="row">
+        <!-- Left Column: Container for questions -->
+        <div class="col-md-12">
+            <h6 class="mb-4">Put the sentences below in the right order. The first sentence is done for you.</h6>
+            <!-- Xóa các slot và thay bằng một container chung để chứa các câu hỏi -->
+            <div id="cardsContainer">
+                <!-- Các card sẽ được tạo từ mảng trong JavaScript -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<!-- ============================================
+                  Modal for Test Result
+================================================ -->
+<!-- Modal for Test Result -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl"> <!-- Thêm lớp modal-xl để modal rộng hơn -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Test and Answer Review Question 2 & 3</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h5 id="totalScore"></h5> <!-- Hiển thị điểm tổng -->
+        <h5 id="scoreClassification"></h5> <!-- Hiển thị phân loại điểm -->
+
+        <!-- Bảng so sánh kết quả -->
+        <table class="table table-bordered mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Your Answer</th>
+              <th scope="col">Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody">
+            <!-- Các kết quả so sánh sẽ được hiển thị tại đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- ============================================
+                  FOOTER SECTION
+================================================ -->
+<div class="footer">
+    <button class="btn btn-back" id="backButton">Back</button>
+    <button class="btn btn-check-result" id="checkResultButton">Check result</button>
+    <button class="btn btn-next" id="nextButton">Next</button>
+</div>
+
+
+<!-- ============================================
+                  POPUP XÁC NHẬN BÀI THI
+================================================ -->
+    <!-- Modal Popup for Confirm and Cancel -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirm Submission</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to submit your test? Once submitted, you can't change your answers.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmSubmitBtn" data-bs-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

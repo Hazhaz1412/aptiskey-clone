@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
+    <title>Aptis listening keys</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/listeningkey.css" rel="stylesheet">
+    <script src="js/listening_question/listening_question15.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ====================================================================================
+                  HEADER SECTION
+======================================================================================== -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-white text-dark shadow-sm">
+  <!-- Left Section -->
+  <div class="d-flex align-items-center">
+    <a href="/listening_question.html" class="me-3 text-decoration-none text-dark fs-4">
+      <i class="bi bi-house-door-fill me-2"></i> <!-- Example icon from Bootstrap Icons -->
+      <span>Aptis Keys</span>
+    </a>
+  </div>
+
+  <!-- Center Section (Countdown Timer) -->
+  <div class="d-flex align-items-center">
+    <span class="time-remaining-label me-2 fs-6">Time remaining:</span>
+    <span class="countdown fs-4" id="countdownTimer">34:00</span>
+  </div>
+
+  <!-- Right Section (Current Step) -->
+  <div id="question_step" class="fs-5 fw-bold">
+    Question 15
+  </div>
+</div>
+
+  <!-- ====================================================================================
+                  Question 15 (Question 15 of 17)
+======================================================================================== -->
+
+<!-- Wrapper Container -->
+<div id="question15" class="container py-5" >
+  <h3 id = "question2_id" class="mb-4">Question 15 of 17</strong></h3>
+  
+
+  <!-- Top Red Bar -->
+  <div class="top-bar d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-3">
+      <!-- Nút play -->
+      <button id="playButton3" class="btn btn-link text-white p-0">
+        <i id="playIcon3" class="bi bi-play-fill fs-4"></i>
+      </button>
+
+      <button class="btn btn-link text-white p-0">
+        <i class="bi bi-volume-up-fill fs-5"></i>
+      </button>
+
+      <input type="range" class="form-range" />
+    </div>
+    <div>
+      <small id="playCountLabel">2 of 2 plays remaining</small>
+    </div>
+
+    <!-- Audio ẩn -->
+    <audio id="audioPlayer3" preload="none"></audio>
+  </div>
+
+  <!-- Question and Options -->
+  <div class="question-container">
+    <h5 class="mb-4"><strong id="question15_id">Topic: Shopping</strong></h5>
+<p class="mb-4" id="question15_id">Listen to two people discussing potential modifications to the topic above. Read the statements and decide whose opinion matches best: the man's, the woman's, or both. Who expresses which opinion?</p>
+    <!-- Câu hỏi 15.1 -->
+    <div class="d-flex align-items-center mb-3 gap-3">
+      <label id="opinion1_label" class="form-label mb-0"></label>
+      <select id="opinion1" class="form-select" style="border: 1px solid #cccc99; max-width: 250px;">
+        <option value="">-- Select an answer --</option>
+      </select>
+    </div>
+
+    <!-- Câu hỏi 15.2 -->
+    <div class="d-flex align-items-center mb-3 gap-3">
+      <label id="opinion2_label" class="form-label mb-0"></label>
+      <select id="opinion2" class="form-select" style="border: 1px solid #cccc99; max-width: 250px;">
+        <option value="">-- Select an answer --</option>
+      </select>
+    </div>
+
+    <!-- Câu hỏi 15.3 -->
+    <div class="d-flex align-items-center mb-3 gap-3">
+      <label id="opinion3_label" class="form-label mb-0"></label>
+      <select id="opinion3" class="form-select" style="border: 1px solid #cccc99; max-width: 250px;">
+        <option value="">-- Select an answer --</option>
+      </select>
+    </div>
+
+    <!-- Câu hỏi 15.4 -->
+    <div class="d-flex align-items-center mb-3 gap-3">
+      <label id="opinion4_label" class="form-label mb-0"></label>
+      <select id="opinion4" class="form-select" style="border: 1px solid #cccc99; max-width: 250px;">
+        <option value="">-- Select an answer --</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Show Transcript Button -->
+  <div class="mt-3">
+    <button id="showTranscriptButton15" class="btn btn-primary">Show Paragraph</button>
+  </div>
+
+  <!-- Transcript Content (Hidden by default) -->
+  <div id="transcriptBox15" class="card mt-3" style="display: none;">
+    <div class="card-body">
+      <p><strong>Paragraph:</strong></p>
+      <p id="transcriptContent15"></p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- ============================================ 
+                  Modal for Test Result
+================================================ -->
+<!-- Modal for Test Result -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Test and Answer Review question 15</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h5 id="totalScore"></h5> <!-- Hiển thị điểm tổng -->
+        <h5 id="scoreClassification"></h5> <!-- Hiển thị phân loại điểm -->
+
+        <!-- Bảng so sánh kết quả -->
+        <table class="table table-bordered mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Your Answer</th>
+              <th scope="col">Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody">
+            <!-- Các kết quả so sánh sẽ được hiển thị tại đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- ============================================
+                  FOOTER SECTION
+================================================ -->
+  <div class="footer">
+    <button class="btn btn-back" id="backButton">Back</button>
+     <button class="btn btn-check-result" id="checkResultButton">Check result</button>
+    <button class="btn btn-next" id="nextButton">Next</button>
+  </div>

@@ -1,0 +1,196 @@
+/* CSS for the quiz application */
+
+.slot {
+  border: 2px dashed #ccc;
+  min-height: 60px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.drag-over {
+  border-color: #333;
+  background-color: #eef;
+}
+
+.draggable-item {
+  cursor: grab;
+}
+
+/* Header styles */
+.header {
+  background-color: #fff;
+  border-bottom: 3px solid red;
+  padding: 15px;
+}
+
+.countdown {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #dae6f1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.footer .btn {
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.footer .btn-back {
+  background-color: #f1c40f; /* Yellow */
+  border: none;
+}
+
+.footer .btn-next {
+  background-color: #2ecc71; /* Green */
+  border: none;
+}
+
+.footer .btn-next:hover, .footer .btn-back:hover {
+  opacity: 0.8; /* Hover effect */
+}
+
+/* New CSS for Check Result button */
+.footer .btn-check-result {
+  background-color: #3498db; /* Blue */
+  border: none;
+  color: white; /* White text */
+}
+
+.footer .btn-check-result:hover {
+  opacity: 0.8; /* Hover effect */
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.footer .btn:disabled {
+  background-color: #ccc; /* Disabled state */
+}
+
+/* Ensure content does not overlap with footer */
+.main-content {
+  margin-bottom: 60px; /* Adjust according to footer height */
+}
+
+
+/* Time remain label styles */
+.time-remaining-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#question_id {
+  padding-top: 20px; /* Căn toàn bộ khối lên phía trên với khoảng cách 20px */
+}
+
+/* Phần fix câu 4 */
+.select-fixed {
+    width: 100px;
+  }
+
+
+      /* Style cho đáp án */
+    .answer-box {
+        background-color: #e0f7fa; /* Nền màu xanh nhẹ */
+        border: 2px solid #26c6da; /* Viền màu xanh đậm */
+        padding: 20px; /* Khoảng cách giữa nội dung và viền */
+        margin-top: 20px;
+        border-radius: 10px; /* Bo góc cho box */
+        font-size: 16px; /* Kích thước font */
+        display: none;  /* Ban đầu ẩn */
+    }
+
+    .answer-box p {
+        margin-bottom: 10px; /* Khoảng cách giữa các đoạn văn */
+    }
+
+    .answer-box p strong {
+        color: #00796b; /* Màu chữ cho tiêu đề "Đáp án" */
+    }
+
+/* Highlight correct and incorrect answers only in the results table */
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+
+/* Định dạng màu cho nút được chọn */
+.btn-active {
+    background-color: #007bff;  /* Màu xanh cho nút đang được chọn */
+    color: white;  /* Màu chữ trắng */
+    border: none;  /* Loại bỏ đường viền */
+}
+
+
+
+/* Màu sắc đẹp cho tổng điểm và phân loại */
+#totalScore {
+    color: #28a745;  /* Màu xanh lá đậm */
+    font-weight: bold;
+    font-size: 1.5rem;  /* Đặt kích thước chữ cho dễ nhìn */
+}
+
+#scoreClassification {
+    color: #007bff;  /* Màu xanh dương */
+    font-weight: bold;
+    font-size: 1.5rem;  /* Đặt kích thước chữ cho dễ nhìn */
+}
+
+ /* Thêm padding để hiện đầy đủ hơn - vì sợ footer nó chiếm không gian */
+#comparisonResult_question1 {
+    padding-bottom: 80px; 
+}
+
+#comparisonResult_question2 {
+    padding-bottom: 80px; 
+}
+#comparisonResult_question3 {
+    padding-bottom: 80px; 
+}
+#comparisonResult_question4 {
+    padding-bottom: 80px; 
+}
+#comparisonResult_question5 {
+    padding-bottom: 80px; 
+}
+
+#question1 {
+    padding-bottom: 80px; 
+}
+#question2 {
+    padding-bottom: 80px; 
+}
+#question3 {
+    padding-bottom: 80px; 
+}
+#question4 {
+    padding-bottom: 80px; 
+}
+#question5 {
+    padding-bottom: 80px; 
+}
+
+
+
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Đảm bảo spinner luôn hiển thị trên cùng */
+}

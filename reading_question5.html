@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
+    <title>Aptis reading keys</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/readingkey.css" rel="stylesheet">
+    <script src="js/reading_question/reading_question5.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS CDN (ensure it's after jQuery) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
+     crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<!-- ====================================================================================
+                  HEADER SECTION
+======================================================================================== -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-white text-dark shadow-sm">
+  <!-- Left Section -->
+  <div class="d-flex align-items-center">
+    <a href="/reading_question" class="me-3 text-decoration-none text-dark fs-4">
+      <i class="bi bi-house-door-fill me-2"></i> <!-- House Icon from Bootstrap Icons -->
+      <span>Aptis Keys</span>
+    </a>
+  </div>
+
+  <!-- Center Section (Countdown Timer) -->
+  <div class="d-flex align-items-center">
+    <span class="time-remaining-label me-2 fs-6">Time remaining:</span>
+    <span class="countdown fs-4" id="countdownTimer">34:00</span>
+  </div>
+
+  <!-- Right Section (Current Step) -->
+  <div id="question_step" class="fs-5 fw-bold">
+    Reading Question 5
+  </div>
+</div>
+
+<!-- ====================================================================================
+                  Question 5
+======================================================================================== -->
+<div id="question5" class="container my-4">
+    
+
+    <!-- Custom Header -->
+    <div class="custom-header mb-4">
+
+        <h1 id = "question5_index" class="mb-4"><strong>Reading question 5</strong></h1>
+        <h4 id = "question5_topic" class="mb-4" style="color: red;"><strong>TOPIC: THE COFFEE</strong></h4>
+        <div>
+            <button class="btn btn-secondary" id="showParagraphButton">Xem nội dung</button>
+            <button class="btn btn-secondary" id="showAnswerButton">Xem mẹo</button>
+        </div>
+    </div>
+
+    <div id="question5-container">
+        <!-- Các câu hỏi sẽ được tạo ra từ JavaScript -->
+    </div>
+</div>
+
+    
+<!-- ============================================ Modal for Test Result ================================================= -->
+<!-- Modal for Test Result -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để làm modal rộng hơn -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Test and Answer Review Question 5</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- 4. Kết quả so sánh - question 4 -->
+        <div class="container" id="comparisonResult_question4">
+          <h3>Correct answer compare</h3>
+          <!-- Hiển thị điểm tổng -->
+          <p id="totalScore_question4"></p>
+
+          <!-- Bảng kết quả với 3 cột: Câu hỏi, Đáp án người học, Đáp án đúng -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Question</th>   <!-- Cột Câu Hỏi -->
+                <th>Your Answer</th>  <!-- Cột Đáp án người học -->
+                <th>Correct Answer</th>  <!-- Cột Đáp án đúng -->
+              </tr>
+            </thead>
+            <tbody id="comparisonTableBody">
+              <!-- Các kết quả so sánh sẽ được hiển thị tại đây -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal Popup -->
+<div class="modal fade" id="answerModal" tabindex="-1" aria-labelledby="answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Add modal-lg here -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="answerModalLabel">Mẹo học đáp án</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Nội dung đáp án sẽ được thêm động từ JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ============================================
+                  FOOTER SECTION
+================================================ -->
+<div class="footer">
+    <button class="btn btn-back" id="backButton">Back</button>
+    <button class="btn btn-check-result" id="checkResultButton">Check result</button>
+    <button class="btn btn-next" id="nextButton">Next</button>
+</div>
+
+
+
