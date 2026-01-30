@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APTIS KEY - Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .section-card h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .question-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .question-link {
+            display: block;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .question-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .listening { border-left: 5px solid #FF6B6B; }
+        .reading { border-left: 5px solid #4ECDC4; }
+        .speaking { border-left: 5px solid #FFE66D; }
+        .writing { border-left: 5px solid #95E1D3; }
+
+        .listening h2 { color: #FF6B6B; border-bottom-color: #FF6B6B; }
+        .reading h2 { color: #4ECDC4; border-bottom-color: #4ECDC4; }
+        .speaking h2 { color: #FFE66D; border-bottom-color: #FFE66D; }
+        .writing h2 { color: #95E1D3; border-bottom-color: #95E1D3; }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 APTIS KEY</h1>
+            <p>Chọn phần bạn muốn luyện tập</p>
+        </header>
+
+        <div class="sections">
+            <!-- Listening Section -->
+            <div class="section-card listening">
+                <h2>🎧 Listening</h2>
+                <div class="question-links">
+                    <a href="listening_question1_13.html" class="question-link">Questions 1-13</a>
+                    <a href="listening_question14.html" class="question-link">Question 14</a>
+                    <a href="listening_question15.html" class="question-link">Question 15</a>
+                    <a href="listening_question16_17.html" class="question-link">Questions 16-17</a>
+                </div>
+            </div>
+
+            <!-- Reading Section -->
+            <div class="section-card reading">
+                <h2>📖 Reading</h2>
+                <div class="question-links">
+                    <a href="reading_question1.html" class="question-link">Question 1</a>
+                    <a href="reading_question2.html" class="question-link">Question 2</a>
+                    <a href="reading_question4.html" class="question-link">Question 4</a>
+                    <a href="reading_question5.html" class="question-link">Question 5</a>
+                </div>
+            </div>
+
+            <!-- Speaking Section -->
+            <div class="section-card speaking">
+                <h2>🎤 Speaking</h2>
+                <div class="question-links">
+                    <a href="speaking_question1.html" class="question-link">Part 1</a>
+                    <a href="speaking_question2.html" class="question-link">Part 2</a>
+                    <a href="speaking_question3.html" class="question-link">Part 3</a>
+                    <a href="speaking_question4.html" class="question-link">Part 4</a>
+                </div>
+            </div>
+
+            <!-- Writing Section -->
+            <div class="section-card writing">
+                <h2>✍️ Writing</h2>
+                <div class="question-links">
+                    <a href="writing/writingkey001.html" class="question-link">Writing Task 1</a>
+                    <a href="writing/writingkey002.html" class="question-link">Writing Task 2</a>
+                    <a href="writing/writingkey003.html" class="question-link">Writing Task 3</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 APTIS KEY - Practice Platform</p>
+        </footer>
+    </div>
+</body>
+</html>
