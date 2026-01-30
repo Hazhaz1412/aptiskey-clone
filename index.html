@@ -166,9 +166,19 @@
             <div class="section-card writing">
                 <h2>✍️ Writing</h2>
                 <div class="question-links">
-                    <a href="writing/writingkey001.html" class="question-link">Writing Task 1</a>
-                    <a href="writing/writingkey002.html" class="question-link">Writing Task 2</a>
-                    <a href="writing/writingkey003.html" class="question-link">Writing Task 3</a>
+                    <!-- Writing Task 1-40 -->
+                    <script>
+                        for (let i = 1; i <= 40; i++) {
+                            let num = i.toString().padStart(3, '0');
+                            document.write(`<a href="writing/writingkey${num}.html" class="question-link">Writing Task ${i}</a>`);
+                        }
+                    </script>
+                    <noscript>
+                        <!-- Nếu JS bị tắt, hiển thị 3 task mẫu -->
+                        <a href="writing/writingkey001.html" class="question-link">Writing Task 1</a>
+                        <a href="writing/writingkey002.html" class="question-link">Writing Task 2</a>
+                        <a href="writing/writingkey003.html" class="question-link">Writing Task 3</a>
+                    </noscript>
                 </div>
             </div>
         </div>

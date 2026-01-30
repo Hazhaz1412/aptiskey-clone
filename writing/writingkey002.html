@@ -1,265 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
-    <title>Aptis reading keys</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/readingkey.css" rel="stylesheet">
-    <script src="js/writing/writingkey002.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
-     crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="author" content="Muhamad Nauval Azhar">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Scada hệ thống trộn tự động Webserver">
+  <title>Hệ thống Aptis keys</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+  <style>
+    .gradient-form {
+      background-color: #eee;
+      min-height: 100vh;
+    }
+    .gradient-custom-2 {
+      background: linear-gradient(135deg, #2b62ff 0%, #5f9cff 35%, #00c2ff 100%);
+    }
+    .rounded-3 { border-radius: 1rem !important; }
+    .text-black .form-label { color: #212529; }
+
+    @media (max-width: 991.98px) {
+      .gradient-custom-2 {
+        min-height: 180px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<!-- ====================================================================================
-                  HEADER SECTION
-======================================================================================== -->
-<!-- Bootstrap Icons -->
-<div class="header d-flex justify-content-between align-items-center p-3 bg-primary text-white shadow-lg">
-  <!-- Left Section -->
-  <div class="d-flex align-items-center">
-    <a href="/writing_bode" class="me-3 text-decoration-none text-white fs-4 d-flex align-items-center">
-      <i class="bi bi-house-door-fill me-2 fs-5"></i> <!-- House Icon from Bootstrap Icons -->
-      <span class="fw-bold">Aptis Keys</span>
-    </a>
-  </div>
+<section class="h-100 gradient-form">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black shadow">
+          <div class="row g-0">
 
-  <!-- Center Section (Countdown Timer) -->
-  <div class="d-flex align-items-center">
-    
-    <span class="countdown fs-4 fw-bold" id="countdownTimer">34:00</span>
-  </div>
+            <!-- FORM LOGIN -->
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
 
-  <!-- Right Section (Current Step) -->
-  <div id="keys_id" class="fs-5 fw-bold text-light">
-    Bộ đề #001
-  </div>
-</div>
-
-
-<!-- ====================================================================================
-                    Question 1
-======================================================================================== -->
-<div id="question1" class="container py-5">
-    <h1 class="mb-4" id="topic-title_q1"></h1> <!-- Đây là thẻ h1 sẽ được cập nhật -->
-    <h6 class="mb-4" id="description_q1"></h6>  <!-- Thẻ h6 sẽ được cập nhật -->
-    
-    <!-- Form cho câu hỏi 1 -->
-    <form id="question1Form">
-        <div id="questions-container1"></div>
-        
-        <!-- Nút xem đáp án -->
-        <button type="button" id="question1_showanswer" class="btn btn-info">Xem đáp án</button>
-    </form>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="question1_answerModal" tabindex="-1" aria-labelledby="question1_answerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="question1_answerModalLabel">Question 1 - Answer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Các câu hỏi và đáp án sẽ được hiển thị ở đây -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<!-- ====================================================================================
-                    Question 2
-======================================================================================== -->
-<div id="question2" class="container py-5">
-    <h1 class="mb-4" id="topic-title_q2"></h1> <!-- Đây là thẻ h1 sẽ được cập nhật -->
-    <h6 class="mb-4" id="description_q2"></h6>  <!-- Thẻ h6 sẽ được cập nhật -->
-    
-    <!-- Form cho câu hỏi 2 -->
-    <form id="question2Form">
-        <div id="questions-container2"></div>
-        <!-- Label đếm số từ, căn lề phải và hiển thị trên 1 dòng riêng biệt -->
-        <div class="d-flex justify-content-end mb-3">
-            <label id="wordCountLabel" class="form-label">Word Count: 0</label>
-        </div>
-                
-        <!-- Nút xem đáp án cho câu hỏi 2 -->
-        <button type="button" id="question2_showanswer" class="btn btn-info">Xem đáp án</button>
-    </form>
-</div>
-
-<!-- Modal cho câu hỏi 2 với chiều rộng lớn -->
-<div class="modal fade" id="question2_answerModal" tabindex="-1" aria-labelledby="question2_answerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="question2_answerModalLabel">Question2: Answer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body2">
-                <!-- Câu hỏi và đáp án câu hỏi 2 sẽ được hiển thị ở đây -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<!-- ====================================================================================
-                    Question 3
-======================================================================================== -->
-<div id="question3" class="container py-5">
-    <h1 class="mb-4" id="topic-title_q3"></h1>
-    <h6 class="mb-4" id="description_q3"></h6>  
-
-    <!-- Form cho câu hỏi 3 -->
-    <form id="question3Form">
-        <div id="questions-container3"></div>
-        <!-- Nút xem đáp án cho câu hỏi 3 -->
-        <button type="button" id="question3_showanswer" class="btn btn-info">Xem đáp án</button>
-    </form>
-</div>
-
-<!-- Modal cho câu hỏi 3 với chiều rộng lớn -->
-<div class="modal fade" id="question3_answerModal" tabindex="-1" aria-labelledby="question3_answerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="question3_answerModalLabel">Question 3: Answer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body3">
-                <!-- Câu hỏi và đáp án câu hỏi 3 sẽ được hiển thị ở đây -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<!-- ====================================================================================
-                    Question 4
-======================================================================================== -->
-<div id="question4" class="container py-5">
-    <h1 class="mb-4" id="topic-title_q4"></h1> 
-    <h6 class="mb-4" id="description_q4"></h6>  
-    
-    <!-- Form cho câu hỏi 4 -->
-    <form id="question4Form">
-        <div id="questions-container4"></div>
-        
-        <!-- Nút xem đáp án cho câu hỏi 4 -->
-        <button type="button" id="question4_showanswer" class="btn btn-info">Xem đáp án</button>
-    </form>
-</div>
-
-<!-- Modal cho câu hỏi 4 với chiều rộng lớn -->
-<div class="modal fade" id="question4_answerModal" tabindex="-1" aria-labelledby="question4_answerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="question4_answerModalLabel">Question 4: Answer</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body4">
-                <!-- Câu hỏi và đáp án câu hỏi 4 sẽ được hiển thị ở đây -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-<!-- Modal Loading -->
-<div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loadingModalLabel">AI đang chấm điểm</h5>
-            </div>
-            <div class="modal-body text-center">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div class="text-center mb-4">
+                  <img src="images/Logo.png" alt="logo" style="width: 120px;">
+                  <h4 class="mt-3 mb-4 pb-1">Aptis Keys</h4>
                 </div>
-                <p>Hãy chờ một lát!!</p>
+
+                <form id="loginForm" class="needs-validation" novalidate autocomplete="off">
+                  <p class="mb-4">Please login to your account</p>
+
+                  <!-- Email -->
+                  <div class="mb-4">
+                    <label class="form-label" for="email">Username</label>
+                    <input id="email" type="text" class="form-control" name="email"
+                           placeholder="Nhập Email" required autofocus>
+                    <div class="invalid-feedback">Email/Username is required</div>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="mb-2">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <label class="form-label mb-0" for="password">Password</label>
+                      <a href="/forgotpassword.html" class="text-decoration-none">Quên mật khẩu?</a>
+                    </div>
+                    <input id="password" type="password" class="form-control"
+                           name="password" required placeholder="Nhập mật khẩu">
+                    <div class="invalid-feedback">Password is required</div>
+                  </div>
+
+                  <!-- LOGIN ERROR -->
+                  <div id="loginError" class="alert alert-danger d-none mt-3"></div>
+
+                  <!-- Remember + Submit -->
+                  <div class="text-left pt-3 mb-4">
+                    <div class="form-check d-inline-flex align-items-center mb-3">
+                      <input type="checkbox" name="remember" id="remember"
+                             class="form-check-input me-2">
+                      <label for="remember" class="form-check-label">Remember Me</label>
+                    </div>
+
+                    <button class="btn btn-primary w-100 py-2" type="submit">
+                      Log in
+                    </button>
+                  </div>
+
+                  <!-- CTA -->
+                  <div class="d-flex align-items-center justify-content-center pb-2">
+                    <p class="mb-0 me-2">Chưa có tài khoản?</p>
+                    <a href="register.html" class="btn btn-outline-danger">Đăng ký học</a>
+                  </div>
+                </form>
+
+              </div>
             </div>
+
+            <!-- INFO PANEL -->
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">Bạn cần đăng nhập để học</h4>
+                <p class="small mb-0">
+                  Để bạn có trải nghiệm tốt hơn trên website, hãy đăng ký tài khoản hoặc đăng nhập để học và trải nghiệm web một cách tốt nhất.
+                  <br><br>
+                  Những bạn chưa đăng ký thi thì cũng có thể đăng ký bằng nút "Đăng ký học", sau khi đăng ký sẽ học được nhé!!
+                  <br><br>
+                  Để đăng ký, vui lòng nhấn vào nút "Đăng ký học" phía bên trái trang.
+                  Nếu bạn đã có tài khoản, hãy đăng nhập ở trường bên trái.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
-    </div>
-</div>
 
-<!-- Modal kết quả -->
-<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="resultModalLabel">Kết quả chấm điểm</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="modal-body-ai">
-                <!-- Kết quả từ API sẽ được hiển thị ở đây -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
+        <div class="text-center mt-4 text-muted">
+          Copyright &copy; 2026 — Aptis Keys
         </div>
+
+      </div>
     </div>
-</div>
-
-
-
-
-<!-- ============================================
-                  FOOTER SECTION
-================================================ -->
-  <div class="footer">
-    <button class="btn btn-back" id="backButton">Back</button>
-    <!-- Nút chấm điểm cả hai câu hỏi -->
-    <button type="button" id="btn_checkallquestions" class="btn btn-primary">Chấm điểm</button>
-    <button class="btn btn-next" id="nextButton">Next</button>
   </div>
-<!-- ============================================
-                  POPUP XÁC NHẬN BÀI THI
-================================================ -->
-<!-- Modal xác nhận -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận phần thi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Bạn có chắc chắn muốn chấm điểm tất cả các câu hỏi?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                <button type="button" id="confirmButton" class="btn btn-primary">Yes</button>
-            </div>
-        </div>
-    </div>
-</div>
+</section>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Validation -->
+<script>
+  (function () {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+
+<!-- LOGIN HANDLER -->
+<script>
+  const form = document.getElementById('loginForm');
+  const errorBox = document.getElementById('loginError');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.classList.add('d-none');
+    errorBox.innerText = '';
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) return;
+
+    try {
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ email, password })
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        window.location.href = data.redirect;
+        return;
+      }
+      errorBox.innerText = data.message;
+
+      errorBox.classList.remove('d-none');
+
+      
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    } catch (err) {
+      errorBox.innerText = 'Không thể kết nối tới máy chủ';
+      errorBox.classList.remove('d-none');
+    }
+  });
+</script>
+
+</body>
+</html>
