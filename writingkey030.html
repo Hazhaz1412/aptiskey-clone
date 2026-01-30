@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
+    <title>Aptis reading keys</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/readingkey.css" rel="stylesheet">
+    <script src="js/writing/writingkey030.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ====================================================================================
+                  HEADER SECTION
+======================================================================================== -->
+<!-- Bootstrap Icons -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-primary text-white shadow-lg">
+  <!-- Left Section -->
+  <div class="d-flex align-items-center">
+    <a href="/writing_bode" class="me-3 text-decoration-none text-white fs-4 d-flex align-items-center">
+      <i class="bi bi-house-door-fill me-2 fs-5"></i> <!-- House Icon from Bootstrap Icons -->
+      <span class="fw-bold">Aptis Keys</span>
+    </a>
+  </div>
+
+  <!-- Center Section (Countdown Timer) -->
+  <div class="d-flex align-items-center">
+    
+    <span class="countdown fs-4 fw-bold" id="countdownTimer">34:00</span>
+  </div>
+
+  <!-- Right Section (Current Step) -->
+  <div id="keys_id" class="fs-5 fw-bold text-light">
+    Bộ đề #001
+  </div>
+</div>
+
+
+<!-- ====================================================================================
+                    Question 1
+======================================================================================== -->
+<div id="question1" class="container py-5">
+    <h1 class="mb-4" id="topic-title_q1"></h1> <!-- Đây là thẻ h1 sẽ được cập nhật -->
+    <h6 class="mb-4" id="description_q1"></h6>  <!-- Thẻ h6 sẽ được cập nhật -->
+    
+    <!-- Form cho câu hỏi 1 -->
+    <form id="question1Form">
+        <div id="questions-container1"></div>
+        
+        <!-- Nút xem đáp án -->
+        <button type="button" id="question1_showanswer" class="btn btn-info">Xem đáp án</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="question1_answerModal" tabindex="-1" aria-labelledby="question1_answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="question1_answerModalLabel">Question 1 - Answer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Các câu hỏi và đáp án sẽ được hiển thị ở đây -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- ====================================================================================
+                    Question 2
+======================================================================================== -->
+<div id="question2" class="container py-5">
+    <h1 class="mb-4" id="topic-title_q2"></h1> <!-- Đây là thẻ h1 sẽ được cập nhật -->
+    <h6 class="mb-4" id="description_q2"></h6>  <!-- Thẻ h6 sẽ được cập nhật -->
+    
+    <!-- Form cho câu hỏi 2 -->
+    <form id="question2Form">
+        <div id="questions-container2"></div>
+        <!-- Label đếm số từ, căn lề phải và hiển thị trên 1 dòng riêng biệt -->
+        <div class="d-flex justify-content-end mb-3">
+            <label id="wordCountLabel" class="form-label">Word Count: 0</label>
+        </div>
+                
+        <!-- Nút xem đáp án cho câu hỏi 2 -->
+        <button type="button" id="question2_showanswer" class="btn btn-info">Xem đáp án</button>
+    </form>
+</div>
+
+<!-- Modal cho câu hỏi 2 với chiều rộng lớn -->
+<div class="modal fade" id="question2_answerModal" tabindex="-1" aria-labelledby="question2_answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="question2_answerModalLabel">Question2: Answer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body2">
+                <!-- Câu hỏi và đáp án câu hỏi 2 sẽ được hiển thị ở đây -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ====================================================================================
+                    Question 3
+======================================================================================== -->
+<div id="question3" class="container py-5">
+    <h1 class="mb-4" id="topic-title_q3"></h1>
+    <h6 class="mb-4" id="description_q3"></h6>  
+
+    <!-- Form cho câu hỏi 3 -->
+    <form id="question3Form">
+        <div id="questions-container3"></div>
+        <!-- Nút xem đáp án cho câu hỏi 3 -->
+        <button type="button" id="question3_showanswer" class="btn btn-info">Xem đáp án</button>
+    </form>
+</div>
+
+<!-- Modal cho câu hỏi 3 với chiều rộng lớn -->
+<div class="modal fade" id="question3_answerModal" tabindex="-1" aria-labelledby="question3_answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="question3_answerModalLabel">Question 3: Answer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body3">
+                <!-- Câu hỏi và đáp án câu hỏi 3 sẽ được hiển thị ở đây -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ====================================================================================
+                    Question 4
+======================================================================================== -->
+<div id="question4" class="container py-5">
+    <h1 class="mb-4" id="topic-title_q4"></h1> 
+    <h6 class="mb-4" id="description_q4"></h6>  
+    
+    <!-- Form cho câu hỏi 4 -->
+    <form id="question4Form">
+        <div id="questions-container4"></div>
+        
+        <!-- Nút xem đáp án cho câu hỏi 4 -->
+        <button type="button" id="question4_showanswer" class="btn btn-info">Xem đáp án</button>
+    </form>
+</div>
+
+<!-- Modal cho câu hỏi 4 với chiều rộng lớn -->
+<div class="modal fade" id="question4_answerModal" tabindex="-1" aria-labelledby="question4_answerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">  <!-- Thêm lớp modal-lg để mở rộng modal -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="question4_answerModalLabel">Question 4: Answer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body4">
+                <!-- Câu hỏi và đáp án câu hỏi 4 sẽ được hiển thị ở đây -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Modal Loading -->
+<div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loadingModalLabel">AI đang chấm điểm</h5>
+            </div>
+            <div class="modal-body text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Hãy chờ một lát!!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal kết quả -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultModalLabel">Kết quả chấm điểm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body-ai">
+                <!-- Kết quả từ API sẽ được hiển thị ở đây -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ============================================
+                  FOOTER SECTION
+================================================ -->
+  <div class="footer">
+    <button class="btn btn-back" id="backButton">Back</button>
+    <!-- Nút chấm điểm cả hai câu hỏi -->
+    <button type="button" id="btn_checkallquestions" class="btn btn-primary">Chấm điểm</button>
+    <button class="btn btn-next" id="nextButton">Next</button>
+  </div>
+<!-- ============================================
+                  POPUP XÁC NHẬN BÀI THI
+================================================ -->
+<!-- Modal xác nhận -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận phần thi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn chấm điểm tất cả các câu hỏi?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" id="confirmButton" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
