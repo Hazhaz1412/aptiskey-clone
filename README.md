@@ -1,0 +1,1 @@
+I do this with non-commercial. I don't own anything and everyone can freely make a change or use it with any purpose.
