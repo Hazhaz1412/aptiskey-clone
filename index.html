@@ -96,11 +96,13 @@
         .reading { border-left: 5px solid #4ECDC4; }
         .speaking { border-left: 5px solid #FFE66D; }
         .writing { border-left: 5px solid #95E1D3; }
+        .grammar { border-left: 5px solid #A78BFA; }
 
         .listening h2 { color: #FF6B6B; border-bottom-color: #FF6B6B; }
         .reading h2 { color: #4ECDC4; border-bottom-color: #4ECDC4; }
         .speaking h2 { color: #FFE66D; border-bottom-color: #FFE66D; }
         .writing h2 { color: #95E1D3; border-bottom-color: #95E1D3; }
+        .grammar h2 { color: #A78BFA; border-bottom-color: #A78BFA; }
 
         footer {
             text-align: center;
@@ -133,10 +135,10 @@
             <div class="section-card listening">
                 <h2>🎧 Listening</h2>
                 <div class="question-links">
-                    <a href="listening_question1_13.html" class="question-link">Questions 1-13</a>
-                    <a href="listening_question14.html" class="question-link">Question 14</a>
-                    <a href="listening_question15.html" class="question-link">Question 15</a>
-                    <a href="listening_question16_17.html" class="question-link">Questions 16-17</a>
+                    <a href="listening_question1_13.html" target="_blank" class="question-link">Questions 1-13</a>
+                    <a href="listening_question14.html" target="_blank" class="question-link">Question 14</a>
+                    <a href="listening_question15.html" target="_blank" class="question-link">Question 15</a>
+                    <a href="listening_question16_17.html" target="_blank" class="question-link">Questions 16-17</a>
                 </div>
             </div>
 
@@ -144,10 +146,10 @@
             <div class="section-card reading">
                 <h2>📖 Reading</h2>
                 <div class="question-links">
-                    <a href="reading_question1.html" class="question-link">Question 1</a>
-                    <a href="reading_question2.html" class="question-link">Question 2</a>
-                    <a href="reading_question4.html" class="question-link">Question 4</a>
-                    <a href="reading_question5.html" class="question-link">Question 5</a>
+                    <a href="reading_question1.html" target="_blank" class="question-link">Question 1</a>
+                    <a href="reading_question2.html" target="_blank" class="question-link">Question 2</a>
+                    <a href="reading_question4.html" target="_blank" class="question-link">Question 4</a>
+                    <a href="reading_question5.html" target="_blank" class="question-link">Question 5</a>
                 </div>
             </div>
 
@@ -155,10 +157,10 @@
             <div class="section-card speaking">
                 <h2>🎤 Speaking</h2>
                 <div class="question-links">
-                    <a href="speaking_question1.html" class="question-link">Part 1</a>
-                    <a href="speaking_question2.html" class="question-link">Part 2</a>
-                    <a href="speaking_question3.html" class="question-link">Part 3</a>
-                    <a href="speaking_question4.html" class="question-link">Part 4</a>
+                    <a href="speaking_question1.html" target="_blank" class="question-link">Part 1</a>
+                    <a href="speaking_question2.html" target="_blank" class="question-link">Part 2</a>
+                    <a href="speaking_question3.html" target="_blank" class="question-link">Part 3</a>
+                    <a href="speaking_question4.html" target="_blank" class="question-link">Part 4</a>
                 </div>
             </div>
 
@@ -170,14 +172,34 @@
                     <script>
                         for (let i = 1; i <= 40; i++) {
                             let num = i.toString().padStart(3, '0');
-                            document.write(`<a href="writingkey${num}.html" class="question-link">Writing Task ${i}</a>`);
+                            document.write(`<a href="writing/writingkey${num}.html" target="_blank" class="question-link">Writing Task ${i}</a>`);
                         }
                     </script>
                     <noscript>
                         <!-- Nếu JS bị tắt, hiển thị 3 task mẫu -->
-                        <a href="writingkey001.html" class="question-link">Writing Task 1</a>
-                        <a href="writingkey002.html" class="question-link">Writing Task 2</a>
-                        <a href="writingkey003.html" class="question-link">Writing Task 3</a>
+                        <a href="writing/writingkey001.html" target="_blank" class="question-link">Writing Task 1</a>
+                        <a href="writing/writingkey002.html" target="_blank" class="question-link">Writing Task 2</a>
+                        <a href="writing/writingkey003.html" target="_blank" class="question-link">Writing Task 3</a>
+                    </noscript>
+                </div>
+            </div>
+
+            <!-- Grammar Section -->
+            <div class="section-card grammar">
+                <h2>📚 Grammar</h2>
+                <div class="question-links">
+                    <!-- Grammar Task 1-40 -->
+                    <script>
+                        for (let i = 1; i <= 40; i++) {
+                            let num = i.toString().padStart(3, '0');
+                            document.write(`<a href="js/grammar/grammar_key${num}.html" target="_blank" class="question-link">Grammar Task ${i}</a>`);
+                        }
+                    </script>
+                    <noscript>
+                        <!-- Nếu JS bị tắt, hiển thị 3 task mẫu -->
+                        <a href="js/grammar/grammar_key001.html" target="_blank" class="question-link">Grammar Task 1</a>
+                        <a href="js/grammar/grammar_key002.html" target="_blank" class="question-link">Grammar Task 2</a>
+                        <a href="js/grammar/grammar_key003.html" target="_blank" class="question-link">Grammar Task 3</a>
                     </noscript>
                 </div>
             </div>
