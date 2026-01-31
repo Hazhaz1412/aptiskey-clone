@@ -1,5 +1,7 @@
 ## 📜 Disclaimer & License
 Live here: https://hazhaz1412.github.io/aptiskey-clone/
+> If this project helped you, please consider giving it a ⭐ **Star** on GitHub!
+
 > **Note**: This project is strictly **non-commercial** and created for educational purposes.
 
 ### Data Source
