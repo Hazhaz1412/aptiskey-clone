@@ -1,1 +1,1 @@
-I do this with non-commercial. I don't own anything and everyone can freely make a change or use it with any purpose.
+This project is strictly non-commercial. I do not claim any ownership of the contents, and anyone is free to use, modify, or distribute it for any purpose.
