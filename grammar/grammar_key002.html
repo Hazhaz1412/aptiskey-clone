@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Thêm thẻ này -->
+    <title>Aptis reading keys</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/readingkey.css" rel="stylesheet">
+    <script src="js/grammar/grammar_key002.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4940447633722822"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ====================================================================================
+                  HEADER SECTION
+======================================================================================== -->
+<!-- Bootstrap Icons -->
+<div class="header d-flex justify-content-between align-items-center p-3 bg-primary text-white shadow-lg">
+  <!-- Left Section -->
+  <div class="d-flex align-items-center">
+    <a href="/grammar_bode" class="me-3 text-decoration-none text-white fs-4 d-flex align-items-center">
+      <i class="bi bi-house-door-fill me-2 fs-5"></i> <!-- House Icon from Bootstrap Icons -->
+      <span class="fw-bold">Aptis Keys</span>
+    </a>
+  </div>
+
+  <!-- Center Section (Countdown Timer)
+  <div class="d-flex align-items-center">
+    
+    <span class="countdown fs-4 fw-bold" id="countdownTimer">34:00</span>
+  </div> -->
+
+  <!-- Right Section (Current Step) -->
+  <div id="question_step" class="fs-5 fw-bold text-light">
+    Grammar
+  </div>
+</div>
+
+
+
+<!-- ============================================
+                  Kết quả so sánh 
+================================================ -->
+<!-- 1. Kết quả tổng điểm và phân loại -->
+<div id="result_navigation" class="container mt-4" style="display: none; text-align: center;">
+    <h4>Test and Answer Review</h4>
+    <h5 id="totalScore"></h5> <!-- Hiển thị điểm tổng -->
+    <h5 id="scoreClassification"></h5> <!-- Hiển thị phân loại điểm -->
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-outline-primary mx-1 btn-active" id="navQ1">1</button>
+        <button class="btn btn-outline-primary mx-1" id="navQ2">2</button>
+        <button class="btn btn-outline-primary mx-1" id="navQ3">3</button>
+        <button class="btn btn-outline-primary mx-1" id="navQ4">4</button>
+        <button class="btn btn-outline-primary mx-1" id="navQ5">5</button>
+        <button class="btn btn-outline-primary mx-1" id="navQ6">6</button>
+    </div>
+</div>
+
+<!-- ====================================================================================
+                  Question 1
+======================================================================================== -->
+<div class="container mt-5 fs-5">
+    <h2 id = "question1_x">Test Results - Question 1</h2>
+    <form id="question1">
+        <!-- Nội dung của form -->
+    </form>
+</div>
+
+<!-- Result Section - Question 1 -->
+<div class="container mt-5" id="resultContainer_question1" style="display: none;">
+    <h2>Test Results - Question 1</h2>
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+        <h5 id="yourScore_question1" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody">
+        </tbody>
+    </table>
+</div>
+<!-- ====================================================================================
+                  Question 2
+======================================================================================== -->
+<div class="container mt-5" id="question2" style="display: none;">
+    <h2 id = "question2_x">Question 26 of 30</h2>
+    <h5>Select a word from the list that has the most similar meaning to the word on the left.</h5>
+    <form id="exerciseForm_question2" class="mt-4">
+        <!-- Nội dung sẽ được tạo bằng JS -->
+    </form>
+</div>
+
+
+<!-- ==================================================================================== -->
+<!-- Result Section - Question 2 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="resultContainer_question2" style="display: none;">
+    <h2>Test Results  - Question 2</h2>
+
+    <!-- Hiển thị câu hỏi và điểm số -->
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+         <h5 id="yourScore_question2" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+
+    <!-- Kết quả bảng -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody_question2">
+            <!-- Results will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- ==================================================================================== -->
+<!-- Question 3 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="question3" style="display: none;">
+    <h2 id = "question2_x">Question 27 of 30</h2>
+    <h5>Complete each definition using a word from the list. Use each word once only. You will not need five of the words.</h5>
+    <form id="exerciseForm_question3" class="mt-4">
+        <!-- Nội dung sẽ được tạo bằng JS -->
+    </form>
+</div>
+
+<!-- ==================================================================================== -->
+<!-- Result Section - Question 3 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="resultContainer_question3" style="display: none;">
+    <h2>Test Results - Question 3</h2>
+
+    <!-- Hiển thị câu hỏi và điểm số -->
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+        <h5 id="yourScore_question3" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+
+    <!-- Kết quả bảng -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody_question3">
+            <!-- Results will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- ==================================================================================== -->
+<!-- Question 4 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="question4" style="display: none;">
+    <h2 id = "question2_x">Question 28 of 30</h2>
+    <h5>Finish each sentence using a word from the list. Use each word once only. You will not need five of the words.</h5>
+    <form id="exerciseForm_question4" class="mt-4">
+        <!-- Nội dung sẽ được tạo bằng JS -->
+    </form>
+</div>
+
+<!-- ==================================================================================== -->
+<!-- Result Section - Question 4 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="resultContainer_question4" style="display: none;">
+    <h2>Test Results - Question 4</h2>
+
+    <!-- Hiển thị câu hỏi và điểm số -->
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+        <h5 id="yourScore_question4" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+
+    <!-- Kết quả bảng -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody_question4">
+            <!-- Results will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- ====================================================================================
+                  Question 5
+======================================================================================== -->
+<div class="container mt-5" id="question5" style="display: none;">
+    <h2 id = "question2_x">Question 29 of 30</h2>
+    <h5>Select a word from the list that has the most similar meaning to the word on the left.</h5>
+    <form id="exerciseForm_question5" class="mt-4">
+        <!-- Nội dung sẽ được tạo bằng JS -->
+    </form>
+</div>
+
+
+<!-- ==================================================================================== -->
+<!-- Result Section - Question 5 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="resultContainer_question5" style="display: none;">
+    <h2>Test Results - Question 5</h2>
+
+    <!-- Hiển thị câu hỏi và điểm số -->
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+        <h5 id="yourScore_question5" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+
+    <!-- Kết quả bảng -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody_question5">
+            <!-- Results will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+    
+
+
+<!-- ====================================================================================
+                  Question 6
+======================================================================================== -->
+<div class="container mt-5" id="question6" style="display: none;">
+    <h2 id = "question2_x">Question 30 of 30</h2>
+    <h5>Select a word from the list that is most often used with the word on the left. Use each word once only. You will not need five of the words.</h5>
+    <form id="exerciseForm_question6" class="mt-4">
+        <!-- Nội dung sẽ được tạo bằng JS -->
+    </form>
+</div>
+
+
+<!-- ==================================================================================== -->
+<!-- Result Section - Question 6 -->
+<!-- ==================================================================================== -->
+<div class="container mt-5" id="resultContainer_question6" style="display: none;">
+    <h2>Test Results - Question 6</h2>
+
+    <!-- Hiển thị câu hỏi và điểm số -->
+    <div id="questionInfo" class="d-flex justify-content-between mb-4">
+        <h5 id="yourScore_question6" class="text-primary">Your score: 0 / 25</h5>
+    </div>
+
+    <!-- Kết quả bảng -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="resultTableBody_question6">
+            <!-- Results will be populated dynamically -->
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ============================================
+                  Modal for Test Result
+================================================ -->
+<div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultModalLabel">Test and Answer Review keys 001</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <h5 id="totalScore"></h5> <!-- Hiển thị điểm tổng -->
+        <h5 id="scoreClassification"></h5> <!-- Hiển thị phân loại điểm -->
+
+        <!-- Bảng so sánh kết quả -->
+        <table class="table table-bordered mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Your Answer</th>
+              <th scope="col">Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody">
+            <!-- Các kết quả so sánh sẽ được hiển thị tại đây -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- ============================================
+                  FOOTER SECTION
+================================================ -->
+<div class="footer">
+    <button class="btn btn-back" id="backButton">Back</button>
+    <button class="btn btn-next" id="nextButton">Next</button>
+</div>
+
+
+<!-- ============================================
+                  POPUP XÁC NHẬN BÀI THI
+================================================ -->
+
+<!-- ====================================================================================
+                  Confirm modal
+======================================================================================== -->
+<!-- Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirm Submission</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to submit your test? Once submitted, you can't change your answers.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="submitTestButton">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
